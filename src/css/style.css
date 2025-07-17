@@ -1,0 +1,573 @@
+*{
+  padding: 0;
+  margin: 0;
+  
+}
+
+
+
+html{
+    box-sizing: border-box;
+}
+    
+
+*,
+*::before
+*::after{
+    box-sizing: inherit;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+button{
+padding: 0;
+border: none;
+background-color: transparent;
+cursor: pointer;
+}
+
+ul{
+list-style: none;
+}
+
+
+
+body{
+ font-family: "Inter", sans-serif;  
+ color: #000;
+ font-size: 16px;
+ font-weight: 500;
+ line-height: 1.2;
+
+}
+
+ /* h1 lazmdir basliqlarda  */
+
+.main__title{
+    font-weight: 700;
+    font-size: 64px;
+    margin-bottom: 20px;
+   }
+
+/* bu container bu herde istifde olunur max*/
+.container{
+    max-width: 1220px;
+   padding: 0 10px;
+   margin: 0 auto;
+}
+
+
+/* Nav baslayir */
+
+.header{
+    min-height: 100vh;
+    position: relative;
+}
+
+.header__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+}
+
+
+
+
+.menu__list{
+    display: flex;
+    align-items: center;
+    gap: 0  40px;
+    font-weight: 700;
+}
+
+
+.menu__item{
+  font-size: 16px;
+
+}
+
+.menu__btn{
+    padding: 15px 58px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 30px;
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/** Nav bitidi **/
+
+
+/** Nav orta hisesis AirPodSMAx **/
+.header__content-images{
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.content-item{
+  display: none;
+}
+
+.content-item.content-item__active{
+display: inline-block;
+}
+
+.header__content-images::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    
+     z-index: -2;
+}
+
+/* has() nedi yoxlutur icde elemet var */
+.header__content-images:has(.color--blue.content-item__active)::before{
+  background: linear-gradient(180deg, #CADBEB 0%, rgba(235,235,235, 0.00)100% );
+}
+
+.header__content-images:has(.color--red.content-item__active)::before{
+  background: linear-gradient(180deg, #F3D6D1 0%, rgba(235,235,235, 0.00)100% );
+}
+.header__content-images:has(.color--green.content-item__active)::before{
+  background: linear-gradient(180deg, #DDEAD9 0%, rgba(235,235,235, 0.00)100% );
+}
+.header__content-images:has(.color--white.content-item__active)::before{
+  background: linear-gradient(180deg, #FAFAFA 0%, rgba(235,235,235, 0.00)100% );
+}
+.header__content-images:has(.color--black.content-item__active)::before{
+  background: linear-gradient(180deg, #B6B6B6 0%, rgba(235,235,235, 0.00)100% );
+}
+
+
+
+.title{
+    font-size: 200px;
+    font-weight: 700;
+    position: absolute;
+    padding-top: 100px;
+   }
+   
+   .title--Pod{
+    position: relative;
+    z-index: -1;
+
+   }
+   .title--air{
+
+   }
+
+   .title--s{
+    
+    display: inline-block;
+     transform: translateY(50px);
+   }
+   .title--m{
+    
+    display: inline-block;
+    transform: translate(-80px,290px);
+    
+    
+   }
+
+   .title--ax{
+    position: absolute;
+    display: inline-block;
+    transform: translate(-150px,425px);
+    z-index: -1;
+   }
+
+   /** Nav sona catdi AirPodSMAx **/
+
+
+   /** section Choose your  burda baslatir **/
+
+   .choose-color{
+    padding: 46px 0 180px;
+    text-align: center;
+   }
+  
+
+   .choose-color__title{
+   font-size: 36px;
+   font-weight: 700;
+   max-width: 555px;
+   margin: 0 auto 20px;
+   }
+
+   .choose-color__text{
+    max-width: 555px;
+    margin: 0 auto 80px;
+   }
+
+   .choose-color__list{
+    display: flex;
+    justify-content: center;
+     gap: 40px;
+   }
+
+   .choose__color-btn{
+      border: solid 1px  #777;
+      border-radius: 20px;
+      padding: 50px 55px;
+   }
+
+   .choose__color-btn--active{
+        display: none;
+   }
+
+   /** section Choose your bitdi**/
+
+   /** section composition baslayir  **/
+
+   .composition{
+    margin-bottom: 180px;
+
+   }
+
+   .composition__title {
+    text-align: center;
+   }
+
+   .composition__text{
+     text-align: center;
+     max-width: 653px;
+     margin: 0 auto 40px;
+   }
+
+   .composition__inner{
+     max-width: 625px;
+     margin: 0 auto ;
+     display: flex;
+     justify-content: space-between;
+   }
+
+
+   .composition__inner-text {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   gap: 15px;
+  }
+
+   .composition__inner-text p{
+     width: 230px;
+   }
+
+ /** section composition bitdi  **/
+
+  /** section cese basladi  **/
+
+  
+.case{
+  background-color: #fafafa;
+  padding: 80px 0 100px;
+  text-align: center;
+}
+
+  .case__title {
+
+  }
+
+  .case__text{
+   max-width: 825px;
+   margin: 0 auto 40px;
+  }
+
+  .energy__title {
+  padding-top: 160px;
+  margin-bottom: 40px;
+  }
+
+  .energy__num{
+    font-size: 210px;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+
+  .energy__text{
+  max-width: 400px;
+  margin: 0 auto;
+  }
+
+    /** section audio basladi **/
+
+    .audio{
+    position: relative;
+    background-image: url(../assets/images/aduio-full.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover
+  }
+
+
+
+  /* .audio::before{
+ content: '';
+ background-image: url(../assets/images/audio-bg.jpg);
+ background-repeat: no-repeat;
+ background-position: top center;
+ background-size: cover;
+ position: absolute;
+ z-index: -2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+   height: 100%;
+
+  }
+  
+  .audio::after{
+    content: '';
+    position: absolute;
+    background-image: url(../assets/images/sound.png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    left: 0;
+    right: 0;
+    bottom: -250px;
+    height: 150vh;
+    width: 100%;
+    z-index: -1;
+   
+  } */
+
+
+
+
+  .audio__inner{
+    min-height: 220vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .aduio__box  {
+   color: #fff;
+  text-align: center;
+  padding-bottom: 50vh;
+  }
+
+  .aduio__text{
+    width: 300px;
+    text-align: center;
+     margin-bottom: 10px;
+  }
+
+.btn{
+
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: #fff;
+  color: #000;
+  border-radius: 30px;
+  padding: 15px 58px;
+  margin-top: 25px;
+}
+
+       /** section audio bitdi **/
+
+
+
+
+
+       /** footer basladi **/
+.footer{
+  
+
+padding: 50px 0 40px;
+text-align: center;
+color: #fff;
+background-color: #000;
+}
+
+
+.footer__text{
+ padding: 20px 0px;
+}
+
+.footer__list{
+  padding-top:  40px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: 20px;
+ flex-wrap: wrap;
+}
+
+
+
+
+
+@media (max-width: 1469px) {
+
+  .header__content-images img{
+    max-width: 100%;
+  }
+  .choose-color__list{
+    flex-wrap: wrap;
+  }
+  .title{
+    font-size: 180px;
+    transform: translate(100px,19px);
+   
+  }
+}
+
+ @media (max-width: 1349px){
+  .title{
+    font-size: 120px;
+    left: 0;
+    right: 0;
+    padding-top: 20vh;
+    text-align: center;
+    transform:none
+    
+  }
+  .title--pod{
+    z-index: 1;
+    
+  }
+  .title--s{
+    transform:none
+  }
+  .title--m{
+    transform:none
+  }
+  .title--ax{
+    transform:none
+  }
+  
+} 
+
+
+@media (max-width: 980px){
+   .title{
+    position: relative;
+    font-size: 100px;
+    padding-top: 0;
+   padding-right: 100px;
+   }
+ 
+  
+   
+   
+} 
+
+
+
+@media (max-width: 1200px) {
+  .choose-color__list{
+    flex-wrap: wrap;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .choose-color{
+   padding-bottom: 60px;
+  }
+  .choose-color__list{
+    gap: 16;
+  }
+  .main__title{
+    font-size: 36px;
+  }
+  .composition{
+    margin-bottom: 60px;
+  }
+
+  .case{
+    padding: 60px 0;
+  }
+  .energy__title{
+    padding-top: 60px ;
+    margin-bottom: 20px;
+  }
+  .energy__num{
+    font-size: 110px;
+    margin-bottom: 20px;
+  }
+  .title{
+   
+    font-size: 56px;
+   text-align: center;
+   padding-right: 80px;
+   }
+}
+
+
+@media (max-width: 560px) {
+ .choose-color__text{
+  margin-bottom: 40px;
+ }
+ .choose-color{
+   margin-bottom: 40px;
+ }
+ .case{
+  padding: 40px 0;
+ }
+
+ .composition__inner-text p{
+  width: 100%;
+ }
+ .composition__inner{
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+ }
+
+ .menu__list{
+  flex-wrap: wrap;
+  gap: 20px 40px;
+ }
+
+ .menu__item-btn {
+  margin-left: auto;
+ }
+ .menu__item-btn button{
+  width:  250px;
+ }
+
+ .menu__item:first-child{
+  margin-left: auto;
+ }
+ 
+  .header__top{
+    align-items: flex-start;
+    
+  }
+ 
+}
+
+
+@media (max-width: 414px) {
+  .main__title,
+  .choose-color__title{
+    font-size: 28px;
+  }
+  .energy__num{
+    font-size: 90px;
+  
+  }
+  .case img{
+    max-width: 100%;
+  }
+ }
+
+ @media (max-width: 414px){
+  .title{
+    font-size: 45px;
+  }
+ }
